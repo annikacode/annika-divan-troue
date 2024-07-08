@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    color: #333;
+    color: #f8f8f8;
 }
 
 
@@ -57,11 +57,12 @@ section {
 }
 
 #details, #contact {
-    background-color: #e6e6e6; /* Light Gray */
+    background-color: #B2AC88;
 }
 
 #rsvp {
     background-color: #f8f8f8;
+    color: #333
 }
 
 form {
