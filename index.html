@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <section class="nav-bar">
             <nav>
                 <ul>
                     <li><a href="#about">Ons Storie</a></li>
@@ -18,9 +18,24 @@
                     <li><a href="#rsvp">RSVP</a></li>
                 </ul>
             </nav>
+        </section>
+        <div class="header-content"> 
             <h1>Annika & Divan</h1>
+            <div id="countdown">
+                <div class="time-unit">
+                    <span id="days"></span> <span class="label">Days</span>
+                </div>
+                <div class="time-unit">
+                    <span id="hours"></span> <span class="label">Hours</span>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes"></span> <span class="label">Minutes</span>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds"></span> <span class="label">Seconds</span>
+                </div>
+            </div>
         </div>
-    
     </header>
 
     <section id="about">
@@ -68,5 +83,6 @@
     <footer>
         <p>&copy; Annika & Divan 01/11/2024.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
