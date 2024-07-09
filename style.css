@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    color: #f8f8f8;
+    color: #333;
 }
 
 
@@ -80,7 +80,120 @@ section {
 }
 
 #about {
-    background-color: #dcbdae; /* Blush */
+    background-color: #dcbdae;/* Blush */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 10px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #f8f8f8;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-container {
+    padding: 20px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.about-container.left {
+    left: 0; 
+}
+
+.about-container.right {
+    left: 50%;
+}
+
+.about-container.left::before, 
+.about-container.right::before {
+    content: ' ';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #333;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.about-container.left::before {
+    right: -17px;
+}
+
+.about-container.right::before {
+    left: -17px;
+}
+
+.about-container.left .about-content {
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+}
+
+.about-container.right .about-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 60px;
+}
+
+.about-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    margin: 0;
+    color: #666;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .about-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .about-container::before {
+        left: 60px;
+    }
+
+    .about-container.right {
+        left: 0%;
+    }
+
+    .about-container.left .about-content,
+    .about-container.right .about-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 #details, #contact {
